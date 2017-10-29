@@ -1,7 +1,7 @@
 var { RoleCreep } = require('model.basic.roleCreep')
 var { doHarvest } = require('model.basic.doHarvest')
 
-exports.roleHarvester = class roleHarvester extends RoleCreep{
+exports.roleExpedition = class roleExpedition extends RoleCreep{
 
     /** @param {Creep} creep **/
     run (creep) {
@@ -31,9 +31,9 @@ exports.roleHarvester = class roleHarvester extends RoleCreep{
     }
 
     getRecommendBody() {
-        return [WORK, CARRY, MOVE];
+        return [WORK, WORK, CARRY, MOVE, CARRY, MOVE, CARRY, MOVE];
     }
     getTag() {
-        return 'harvester';
+        return 'expedition';
     }
 }

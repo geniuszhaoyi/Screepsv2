@@ -17,6 +17,11 @@ exports.ModelIndividualControl = class ModelIndividualControl extends Model{
             this.run_creep(creep);
         }
 
+        for(var id in Game.structures) {
+            var structure = Game.structures[id];
+            this.run_structure(structure);
+        }
+
         this.after_run();
     }
 
@@ -27,6 +32,9 @@ exports.ModelIndividualControl = class ModelIndividualControl extends Model{
     }
     run_creep(creep) {
         console.log('Error (run_creep@model.individualControl.js): You should implement this method');
+    }
+    run_structure(structure) {
+        console.log('Error (run_structure@model.individualControl.js): You should implement this method');
     }
     
 }
